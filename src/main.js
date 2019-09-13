@@ -4,6 +4,9 @@ import App from './App.vue'
 import HelloWorld from "./components/HelloWorld"
 import Home from "./components/Home"
 import Staff from "./components/Staff"
+import axios from "axios"
+
+window.axios = axios
 
 Vue.use(VueRouter)
 
@@ -22,3 +25,4 @@ new Vue({
   router,
   render: h => h(App),
 }).$mount('#app')
+
