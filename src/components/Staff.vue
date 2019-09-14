@@ -3,7 +3,7 @@
         <h1>Our Staff</h1>
         <NavigationBar></NavigationBar>
         <section class="staff-list">
-            <Person v-for="person in staff" :key="person.id" :name="person.name" :title="person.title" :photo-url="person.photoUrl"></Person>
+            <Person v-for="person in staff" :key="person.id" :id="person.id" :name="person.name" :title="person.title" :photo-url="person.photoUrl"></Person>
         </section>
     </div>
 </template>

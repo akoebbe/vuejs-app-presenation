@@ -1,15 +1,20 @@
 <template>
     <div class="person">
-        <img :src="photoUrl">
+        <router-link :to="'/staff/' + id">
+            <img :src="photoUrl">
+        </router-link>
         <h2 v-text="name"></h2>
         <h3 v-text="title"></h3>
     </div>
 </template>
 
 <script>
+import NavigationBar from "./NavigationBar";
 export default {
     name: "Person",
+    components: {NavigationBar},
     props: {
+        id: Number,
         name: String,
         title: String,
         photoUrl: URL

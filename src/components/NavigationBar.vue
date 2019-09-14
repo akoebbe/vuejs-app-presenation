@@ -17,6 +17,7 @@
 ul {
     list-style-type: none;
     padding: 0;
+    text-align: center;
 }
 li {
     display: inline-block;
