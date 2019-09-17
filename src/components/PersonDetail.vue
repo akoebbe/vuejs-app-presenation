@@ -2,10 +2,20 @@
     <div class="person-detail">
         <NavigationBar></NavigationBar>
         <h1 v-text="person.name"></h1>
-        <img :src="person.photoUrl">
-        <dt>Phone:</dt><dd v-text="person.phone"></dd>
-        <dt>Email:</dt><dd v-text="person.email"></dd>
-        <section class="bio">{{person.bio}}</section>
+
+        <section class="details">
+            <section class="copy">
+                <h2 v-text="person.title"></h2>
+                <dt>Phone:</dt>
+                <dd v-text="person.phone"></dd>
+                <dt>Email:</dt>
+                <dd v-text="person.email"></dd>
+                <div class="bio" v-text="person.bio"></div>
+            </section>
+            <section class="photo">
+                <img :src="person.photoUrl">
+            </section>
+        </section>
     </div>
 </template>
 
@@ -14,31 +24,45 @@
     export default {
         name: "PersonDetail",
         components: {NavigationBar},
-        data() {
-            return {
-                person: {}
+        computed: {
+            person() {
+                return this.$store.getters['staff/getPersonById'](this.$route.params.id)
             }
         },
-        mounted() {
-            axios
-                .get('/data/staff/' + this.$route.params.id + '.json')
-                .then(response => this.person = response.data)
+        created() {
+            this.$store.dispatch('staff/getAllStaff')
         }
+
     }
 </script>
 
 <style scoped lang="scss">
+    h1 {
+        margin-bottom: 0;
+    }
     .person-detail {
         text-align: left;
         max-width: 60rem;
         margin: auto;
     }
+    .details{
+        display: flex;
+        flex-shrink: 1;
+    }
+    .copy {
+        flex: 2;
+    }
+    .photo {
+        flex: 1;
+        margin-left: 1rem;
+    }
     img {
         float: right;
-        margin: .25rem 1rem;
+        width: 100%;
+        height: auto;
+        box-shadow: 0 4px 10px rgba(#000000, .5);
     }
     .bio {
         margin-top: 1rem;
     }
-
 </style>

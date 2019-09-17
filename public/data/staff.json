@@ -3,42 +3,42 @@
     "id": 1,
     "name": "Andrew Koebbe",
     "title": "Presenter",
-    "photoUrl": "http://lorempixel.com/256/256/animals/1/"
+    "photoUrl": "/staff_photos/andrew_koebbe.jpg"
   },
   {
     "id": 2,
     "name": "Dangeresque",
     "title": "Crooked Cop/Private Eye",
-    "photoUrl": "http://lorempixel.com/256/256/animals/1/"
+    "photoUrl": "/staff_photos/dangeresque.png"
   },
   {
     "id": 3,
     "name": "Crack Stuntman",
     "title": "Panda Outfitter",
-    "photoUrl": "http://lorempixel.com/256/256/animals/1/"
+    "photoUrl": "/staff_photos/crack_stuntman.png"
   },
   {
     "id": 4,
     "name": "Dolph Hauldhagen",
     "title": "Battle Axeing Instructor",
-    "photoUrl": "http://lorempixel.com/256/256/animals/1/"
+    "photoUrl": "/staff_photos/dolph_hauldhagen.png"
   },
   {
     "id": 5,
     "name": "Litigation Jackson",
     "title": "Legal Counsel",
-    "photoUrl": "http://lorempixel.com/256/256/animals/1/"
+    "photoUrl": "/staff_photos/litigation_jackson.png"
   },
   {
     "id": 6,
     "name": "Trogdor Burninator",
     "title": "The Heavy",
-    "photoUrl": "http://lorempixel.com/256/256/animals/1/"
+    "photoUrl": "/staff_photos/trogdor.png"
   },
   {
     "id": 7,
-    "name": "Lem Sportsinterviews",
-    "title": "Author",
-    "photoUrl": "http://lorempixel.com/256/256/animals/1/"
+    "name": "Biscuitdoughhandsman",
+    "title": "He did it!!",
+    "photoUrl": "/staff_photos/biscuitdoughhandsman.png"
   }
 ]

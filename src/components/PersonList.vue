@@ -5,19 +5,18 @@
         </router-link>
         <h2 v-text="name"></h2>
         <h3 v-text="title"></h3>
+        <div @click="$emit('person-delete', id)">delete</div>
     </div>
 </template>
 
 <script>
-import NavigationBar from "./NavigationBar";
 export default {
-    name: "Person",
-    components: {NavigationBar},
+    name: "PersonList",
     props: {
         id: Number,
         name: String,
         title: String,
-        photoUrl: URL
+        photoUrl: String
     }
 }
 </script>
@@ -26,6 +25,9 @@ export default {
 img {
     border-radius: 50%;
     display: block;
+    width: 256px;
+    height: 256px;
+    box-shadow: 0 4px 10px rgba(#000000, .5);
 }
 h2, h3 {
     margin: .25rem 0;
