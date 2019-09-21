@@ -30,7 +30,7 @@
             }
         },
         created() {
-            this.$store.dispatch('staff/getAllStaff')
+            this.$store.dispatch('staff/loadAllStaff')
         }
 
     }

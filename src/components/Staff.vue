@@ -22,19 +22,6 @@
     export default {
         name: "Staff",
         components: {PersonList, NavigationBar},
-        data() {
-            return {
-//                staff: [
-                    // { id: 1, name: 'Andrew Koebbe', title: 'Presenter', photoUrl: 'http://lorempixel.com/256/256/animals/1/'},
-                    // { id: 2, name: 'Dangeresque', title: 'Crooked Cop/Private Eye', photoUrl: 'http://lorempixel.com/256/256/animals/1/'},
-                    // { id: 3, name: 'Crack Stuntman', title: 'Panda Outfitter', photoUrl: 'http://lorempixel.com/256/256/animals/1/'},
-                    // { id: 4, name: 'Dolph Hauldhagen', title: 'Battle Axeing Instructor', photoUrl: 'http://lorempixel.com/256/256/animals/1/'},
-                    // { id: 5, name: 'Litigation Jackson', title: 'Legal Counsel', photoUrl: 'http://lorempixel.com/256/256/animals/1/'},
-                    // { id: 6, name: 'Trogdor Burninator', title: 'The Heavy', photoUrl: 'http://lorempixel.com/256/256/animals/1/'},
-                    // { id: 7, name: 'Lem Sportsinterviews', title: 'Author', photoUrl: 'http://lorempixel.com/256/256/animals/1/'},
-//                ]
-            }
-        },
         computed: mapState({
             staff: state => state.staff.all
         }),
@@ -43,13 +30,8 @@
                 this.$store.commit('staff/deleteStaff', id)
             }
         },
-        mounted() {
-            // axios
-            //     .get('/data/staff.json')
-            //     .then(response => this.staff = response.data)
-        },
         created() {
-            this.$store.dispatch('staff/getAllStaff')
+            this.$store.dispatch('staff/loadAllStaff')
         }
     }
 </script>

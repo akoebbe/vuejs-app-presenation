@@ -13,7 +13,7 @@ const getters = {
 
 // actions
 const actions = {
-    getAllStaff ({ commit }) {
+    loadAllStaff ({ commit }) {
         if(state.all.length == 0) {
             axios
                 .get('/data/staffFull.json')
